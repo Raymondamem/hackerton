@@ -1,0 +1,341 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopify Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./app.css" />
+</head>
+
+<body>
+    <header class="header content_grid">
+        <div class="breakout">
+            <a href="https://shopify.com" class="logo">
+                <img src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="shopify logo mobile"
+                    class="logoMobile">
+                <img src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg" alt="shopify logo"
+                    class="logoDesktop">
+            </a>
+            <label for="searchIcon" class="header__search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.3226 13.3833C11.3996 14.0841 10.2484 14.5 9 14.5C5.96243 14.5 3.5 12.0376 3.5 9C3.5 5.96243 5.96243 3.5 9 3.5C12.0376 3.5 14.5 5.96243 14.5 9C14.5 10.2484 14.0841 11.3996 13.3833 12.3226L16.2803 15.2197C16.5732 15.5126 16.5732 15.9874 16.2803 16.2803C15.9874 16.5732 15.5126 16.5732 15.2197 16.2803L12.3226 13.3833ZM13 9C13 11.2091 11.2091 13 9 13C6.79086 13 5 11.2091 5 9C5 6.79086 6.79086 5 9 5C11.2091 5 13 6.79086 13 9Z"
+                        fill="#B5B5B5" />
+                </svg>
+                <input type="search" id="searchIcon" placeholder="Search">
+            </label>
+
+            <div>
+                <button id="notification">
+                    <!-- <img src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="notification icon"> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.97273 14.4239L5.52681 14.1427C3.67214 13.9295 3.14613 11.4844 4.74908 10.5274L4.81401 10.4886C5.68671 9.96761 6.22116 9.02609 6.22116 8.00969V7.5C6.22116 5.01472 8.23587 3 10.7212 3C13.2064 3 15.2212 5.01472 15.2212 7.5V8.00969C15.2212 9.02609 15.7556 9.96761 16.6283 10.4886L16.6932 10.5274C18.2962 11.4844 17.7702 13.9295 15.9155 14.1427L13.3727 14.435V14.8C13.3727 16.2912 12.1639 17.5 10.6727 17.5C9.18156 17.5 7.97273 16.2912 7.97273 14.8V14.4239ZM11.8727 14.5H9.47273V14.8C9.47273 15.4627 10.01 16 10.6727 16C11.3355 16 11.8727 15.4627 11.8727 14.8V14.5ZM8.72116 13H12.7212L15.7442 12.6525C16.1737 12.6032 16.2955 12.0369 15.9243 11.8153L15.8594 11.7766C15.7798 11.7291 15.7022 11.6793 15.6264 11.6273C15.4713 11.521 15.3243 11.4055 15.1858 11.2818C15.1612 11.2598 15.1369 11.2377 15.1129 11.2152C14.2351 10.395 13.7212 9.23833 13.7212 8.00969V7.5C13.7212 5.84315 12.378 4.5 10.7212 4.5C9.0643 4.5 7.72116 5.84315 7.72116 7.5V8.00969C7.72116 9.23833 7.20721 10.395 6.32941 11.2152C6.30539 11.2377 6.2811 11.2598 6.25653 11.2818C6.11805 11.4055 5.971 11.521 5.81593 11.6273C5.74016 11.6793 5.66246 11.7291 5.58292 11.7766L5.51799 11.8153C5.1468 12.0369 5.26861 12.6032 5.69809 12.6525L8.72116 13Z"
+                            fill="#E3E3E3" />
+                    </svg>
+                </button>
+                <button class="profile">
+                    <span class="fullName">Davii Collections</span>
+                    <span class="fullAccronym">DC</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="content_flex">
+        <section>
+            <div class="tip">
+                <p>Extend your trial for $<span id="dynamicDollar">1</span>/month for 3 months on select plans.</p>
+                <button class="tip__plan">Select a plan</button>
+                <button class="tip__close">
+                    <svg width="41" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z"
+                            fill="#fff" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="accordionWrapper">
+                <div class="accordionWrapper__header">
+                    <h3>Setup guide</h3>
+                    <p>Use this personalized guide to get your store up and running.</p>
+                    <p>
+                        <span>
+                            <span id="of">1</span>/<span>5</span>
+                            completed
+                        </span>
+                        <progress min="0" max="100" value="30"></progress>
+                    </p>
+
+                    <button id="toggleAccordion">
+                        <img src="https://crushingit.tech/hackathon-assets/icon-arrow-down.svg" alt="accordion closed"
+                            id="closeAcd">
+                        <!-- <img src="https://crushingit.tech/hackathon-assets/icon-arrow-up.svg" alt="accordion open" id="openAcd"> -->
+                    </button>
+                </div>
+                <div id="accordionWrapper__body" class="accordionWrapper__body">
+                    <!-- item 1 -->
+                    <div class="accordionWrapper__body__item">
+                        <div class="accordionWrapper__body__item__wrapper">
+                            <label for="customize1" class="customize">
+                                <input type="checkbox" id="customize1">
+                                <span class="checkboxIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="current" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="hovered" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="loading_click" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <div class="accordionWrapper__body__item__wrapper__body">
+                                <h3 class="accordionWrapper__body__item__wrapper__body__header">
+                                    Customize your online store
+                                </h3>
+                                <div>
+                                    <p class="accordionWrapper__body__item__wrapper__body__p"><span> Choose a theme and
+                                            add
+                                            your
+                                            logo,
+                                            colors,
+                                            and images to reflect your brand.</span> <a href="#">Learn more</a></p>
+                                    <button id="customize"
+                                        class="accordionWrapper__body__item__wrapper__body__btn">Customize
+                                        theme</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionWrapper__body__item__img">
+                            <img src="https://crushingit.tech/hackathon-assets/customise-store.png"
+                                alt="customise-store">
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="accordionWrapper__body__item">
+                        <div class="accordionWrapper__body__item__wrapper">
+                            <label for="customize2" class="customize">
+                                <input type="checkbox" id="customize2">
+                                <span class="checkboxIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="current" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="hovered" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="loading_click" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <div class="accordionWrapper__body__item__wrapper__body">
+                                <h3 class="accordionWrapper__body__item__wrapper__body__header">
+                                    Add your first product
+                                </h3>
+                                <div>
+                                    <p class="accordionWrapper__body__item__wrapper__body__p"><span> Write a
+                                            description,
+                                            add photos,
+                                            and
+                                            set
+                                            pricing for the products you plan to sell.</span> <a href="#">Learn more</a>
+                                    </p>
+                                    <div class="accordionWrapper__body__item__wrapper__body__btn__wrap">
+                                        <button id="AddProduct"
+                                            class="accordionWrapper__body__item__wrapper__body__btn">Add
+                                            product</button>
+                                        <button id="ImportProduct"
+                                            class="accordionWrapper__body__item__wrapper__body__btn importProduct">Import
+                                            product</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionWrapper__body__item__img">
+                            <img src="https://crushingit.tech/hackathon-assets/product.png" alt="product">
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="accordionWrapper__body__item">
+                        <div class="accordionWrapper__body__item__wrapper">
+                            <label for="customize3" class="customize">
+                                <input type="checkbox" id="customize3">
+                                <span class="checkboxIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="current" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="hovered" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="loading_click" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <div class="accordionWrapper__body__item__wrapper__body">
+                                <h3 class="accordionWrapper__body__item__wrapper__body__header">
+                                    Add a custom domain
+                                </h3>
+                                <div>
+                                    <p class="accordionWrapper__body__item__wrapper__body__p"><span> Your current domain
+                                            is
+                                            222219.myshopify.com
+                                            but you can add a custom domain to help customers find your online
+                                            store.</span>
+                                        <a href="#">Learn
+                                            more</a>
+                                    </p>
+                                    <button id="AddDomain" class="accordionWrapper__body__item__wrapper__body__btn">Add
+                                        domain</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionWrapper__body__item__img">
+                            <img src="https://crushingit.tech/hackathon-assets/website.png" alt="website">
+                        </div>
+                    </div>
+                    <!-- item 4 -->
+                    <div class="accordionWrapper__body__item">
+                        <div class="accordionWrapper__body__item__wrapper">
+                            <label for="customize4" class="customize">
+                                <input type="checkbox" id="customize4" />
+                                <span class="checkboxIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="current" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="hovered" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="loading_click" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <div class="accordionWrapper__body__item__wrapper__body">
+                                <h3 class="accordionWrapper__body__item__wrapper__body__header">
+                                    Name your store
+                                </h3>
+                                <div>
+                                    <p class="accordionWrapper__body__item__wrapper__body__p"><span> Your temporary
+                                            store
+                                            name is
+                                            currently Davii
+                                            collections. The store name appears in your admin and your online
+                                            store.</span>
+                                        <a href="#">Learn
+                                            more</a>
+                                    </p>
+                                    <button id="customize" class="accordionWrapper__body__item__wrapper__body__btn">Name
+                                        store</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionWrapper__body__item__img">
+                            <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="name-store">
+                        </div>
+                    </div>
+                    <!-- item 5 -->
+                    <div class="accordionWrapper__body__item">
+                        <div class="accordionWrapper__body__item__wrapper">
+                            <label for="customize5" class="customize">
+                                <input type="checkbox" id="customize5">
+                                <span class="checkboxIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="current" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="hovered" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="loading_click" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2"
+                                            stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </label>
+                            <div class="accordionWrapper__body__item__wrapper__body">
+                                <h3 class="accordionWrapper__body__item__wrapper__body__header">
+                                    Set up a payment provider
+                                </h3>
+                                <div>
+                                    <p class="accordionWrapper__body__item__wrapper__body__p"><span> Choose a payment
+                                            provider to
+                                            start
+                                            accepting
+                                            payments. You’ll need to create an account with the payment provider and set
+                                            it
+                                            up
+                                            with
+                                            your Shopify store.</span> <a href="#">Learn more</a></p>
+                                    <button id="customize" class="accordionWrapper__body__item__wrapper__body__btn">Set
+                                        up
+                                        payment</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionWrapper__body__item__img">
+                            <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="payment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+</body>
+
+</html>
